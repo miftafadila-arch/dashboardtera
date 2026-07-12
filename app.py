@@ -1,4 +1,3 @@
-from streamlit_autorefresh import st_autorefresh
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -11,8 +10,6 @@ st.set_page_config(
     page_icon="📊",
     layout="wide"
 )
-
-st_autorefresh(interval=5000, key="refresh")
 
 st.title("📊 Dashboard Monitoring Tera")
 
