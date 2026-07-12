@@ -23,6 +23,7 @@ def load_data():
     return pd.read_csv(URL)
 
 df = load_data()
+st.write(df.columns.tolist())
 
 if df.empty:
     st.warning("Data masih kosong.")
