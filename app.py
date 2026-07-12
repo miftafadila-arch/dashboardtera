@@ -23,6 +23,13 @@ def load_data():
     return pd.read_csv(URL)
 
 df = load_data()
+
+st.write("Kolom yang terbaca:")
+st.write(df.columns.tolist())
+
+st.write(df.head())
+st.stop()
+
 st.write(df.columns.tolist())
 
 if df.empty:
