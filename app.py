@@ -28,10 +28,6 @@ if df.empty:
     st.warning("Data masih kosong.")
     st.stop()
 
-if df.empty:
-    st.warning("Data masih kosong.")
-    st.stop()
-
 # ================
 # TIPE HARUS ANGKA
 # ================
@@ -46,12 +42,6 @@ urutan_bulan = [
     "Mei", "Juni", "Juli", "Agustus",
     "September", "Oktober", "November", "Desember"
 ]
-
-df_filter["Bulan"] = pd.Categorical(
-    df_filter["Bulan"],
-    categories=urutan_bulan,
-    ordered=True
-)
 
 # =======
 # SIDEBAR
@@ -78,6 +68,12 @@ if tahun != "Semua":
 
 if bulan != "Semua":
     df_filter = df_filter[df_filter["Bulan"] == bulan]
+
+df_filter["Bulan"] = pd.Categorical(
+    df_filter["Bulan"],
+    categories=urutan_bulan,
+    ordered=True
+)
 
 # ===========
 # DATA GRAFIK
@@ -108,7 +104,8 @@ fig = px.bar(
     color="Jenis UTTP",
     text="Jumlah",
     barmode="stack",
-    title="Jumlah Tera per Bulan Berdasarkan Jenis UTTP"
+    title="Jumlah Tera per Bulan Berdasarkan Jenis UTTP",
+    category_orders={"Bulan": urutan_bulan}
 )
 
 # Angka berada di dalam batang
