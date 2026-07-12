@@ -24,9 +24,9 @@ def load_data():
 
 df = load_data()
 
-st.write("Kolom:", df.columns.tolist())
-st.write(df.head())
-st.stop()
+if df.empty:
+    st.warning("Data masih kosong.")
+    st.stop()
 
 if df.empty:
     st.warning("Data masih kosong.")
