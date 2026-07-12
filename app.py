@@ -42,13 +42,13 @@ df["Jumlah"] = pd.to_numeric(df["Jumlah"])
 # URUTAN BULAN
 # ============
 urutan_bulan = [
-    "Januari","Februari","Maret","April",
-    "Mei","Juni","Juli","Agustus",
-    "September","Oktober","November","Desember"
+    "Januari", "Februari", "Maret", "April",
+    "Mei", "Juni", "Juli", "Agustus",
+    "September", "Oktober", "November", "Desember"
 ]
 
-df["Bulan"] = pd.Categorical(
-    df["Bulan"],
+df_filter["Bulan"] = pd.Categorical(
+    df_filter["Bulan"],
     categories=urutan_bulan,
     ordered=True
 )
@@ -87,6 +87,7 @@ grafik = (
     .groupby(["Bulan", "Jenis UTTP"], observed=True)["Jumlah"]
     .sum()
     .reset_index()
+    .sort_values("Bulan")
 )
 
 grafik["Bulan"] = pd.Categorical(
@@ -123,6 +124,7 @@ total = (
     .groupby("Bulan", observed=True)["Jumlah"]
     .sum()
     .reset_index()
+    .sort_values("Bulan")
 )
 
 total["Bulan"] = pd.Categorical(
