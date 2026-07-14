@@ -6,8 +6,7 @@ import plotly.express as px
 # KONFIGURASI HALAMAN
 # ===================
 st.set_page_config(
-    page_title="DALANG KEBUMEN : Dashboard Pelayanan Tera/Tera Ulang
-UPTD Metrologi Legal Kabupaten Kebumen",
+    page_title="DALANG KEBUMEN : Dashboard Pelayanan Tera/Tera Ulang UPTD Metrologi Legal Kabupaten Kebumen",
     page_icon="📊",
     layout="wide"
 )
