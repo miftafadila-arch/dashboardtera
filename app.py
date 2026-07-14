@@ -6,7 +6,8 @@ import plotly.express as px
 # KONFIGURASI HALAMAN
 # ===================
 st.set_page_config(
-    page_title="Dashboard Monitoring Tera",
+    page_title="DALANG KEBUMEN : Dashboard Pelayanan Tera/Tera Ulang
+UPTD Metrologi Legal Kabupaten Kebumen",
     page_icon="📊",
     layout="wide"
 )
@@ -16,7 +17,7 @@ st.title("📊 Dashboard Monitoring Tera")
 # ============
 # MEMBACA DATA
 # ============
-URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbv_iIRdFlb7jyf1zOSDNWAlUw6Ymkb0draXs7hji_IGBzURZBWIa33NAB0Vyyx-xOViwkSiAQx9eL/pub?output=csv"
+URL = "https://docs.google.com/spreadsheets/d/1Q7eYM-0OaR3yipkffl29x8iKtPYfGH8IDzDvPTVYEe4/edit?gid=1689868182#gid=1689868182"
 
 @st.cache_data(ttl=5)
 def load_data():
