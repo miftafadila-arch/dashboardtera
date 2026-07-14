@@ -16,7 +16,7 @@ st.title("📊 DALANG KEBUMEN : Dashboard Pelayanan Tera/Tera Ulang UPTD Metrolo
 # ============
 # MEMBACA DATA
 # ============
-URL = "https://docs.google.com/spreadsheets/d/1Q7eYM-0OaR3yipkffl29x8iKtPYfGH8IDzDvPTVYEe4/edit?gid=1689868182#gid=1689868182"
+URL = "https://docs.google.com/spreadsheets/d/1Q7eYM-0OaR3yipkffl29x8iKtPYfGH8IDzDvPTVYEe4/edit?usp=sharing"
 
 @st.cache_data(ttl=5)
 def load_data():
