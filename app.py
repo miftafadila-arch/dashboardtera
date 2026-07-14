@@ -11,7 +11,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📊 Dashboard Monitoring Tera")
+st.title("📊 DALANG KEBUMEN : Dashboard Pelayanan Tera/Tera Ulang UPTD Metrologi Legal Kabupaten Kebumen")
 
 # ============
 # MEMBACA DATA
@@ -147,8 +147,8 @@ for i in range(len(total)):
 # ===============
 fig.update_layout(
     template="plotly_white",
-    xaxis_title="Bulan",
-    yaxis_title="Jumlah Tera",
+    xaxis_title="Bulan ke-",
+    yaxis_title="Jumlah UTTP yang Tertera (Unit)",
     legend_title="Jenis UTTP",
     height=650
 )
